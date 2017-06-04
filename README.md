@@ -1,7 +1,8 @@
-# The Rambler
+# The Rambler and PokePoke
 
 A friday fun project. 
 
+## Rambler
 It "**rambles**" the string passed in.
 
 Rambles is just my word for converting the string based on a particular base.
@@ -43,3 +44,30 @@ the console. Just a test method.
 Please refer to the [main.js](./main.js) for a better example.
 
 ###### JS version: ES5
+
+## PokePoke
+
+It **pokemonizes** the input string.
+The names are fetched from the [pokeapi](http://pokeapi.co/).
+
+This uses NodeJS for fetching data from the API server.
+
+Please use it with caution since the API server often crashes.
+
+Usage:
+```javascript
+const pokepoke = require("./pokepoke");
+
+// call the callback function after making the pokemonname string
+// with the console.log in it.
+pokepoke.pokepoke.pokemonize("Hey there, get here!", function (data) {
+
+    console.log("Pokemonized String = " + data);
+});
+```
+```
+// output:
+Pokemonized String = Koffing^(*_*)^Cottonee^(*_*)^Clefairy^(*_*)^Floette^(*_*)^Golem^(*_*)^Mewtwo^(*_*)^Groudon^(*_*)^Pidgey^(*_*)^Grovyle^(*_*)^Mienfoo^(*_*)^Krookodile^(*_*)^Golbat^(*_*)^Klefki^(*_*)^Weepinbell^(*_*)^Buizel^(*_*)^Mr-mime^(*_*)^Cranidos
+```
+###### JS version: ES5
+###### NodeJS: v7.10.0

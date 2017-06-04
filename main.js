@@ -19,3 +19,15 @@
 
 	console.log(rambler.bulbasaur.convertToBase("bulbasaur", 2));
 })());
+
+(function () {
+
+	const pokepoke = require("./pokepoke");
+
+	// call the callback function after making the pokemonname string
+	// with the console.log in it.
+	pokepoke.pokepoke.pokemonize("Hey there, get here!", function (data) {
+
+		console.log("Pokemonized String = " + data);
+	});
+}());
